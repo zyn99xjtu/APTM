@@ -1,7 +1,6 @@
 import os
 import argparse
 
-from utils.hdfs_io import hexists, hcopy
 
 # Set it correctly for distributed training across nodes
 NNODES = 1  # e.g. 1/2/3/4
