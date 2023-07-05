@@ -46,8 +46,7 @@ conda activate APTM
 
 ### Datasets Prepare
 
-Download the CUHK-PEDES dataset from [here](https://github.com/ShuangLI59/Person-Search-with-Natural-Language-Description) , the pa100k dataset from [here](), the RSTPReid dataset from [here](), and ICFG-PEDES dataset from [here](https://github.com/zifyloo/SSAN).
-(还有pa100k 和 RSTPReid链接)
+Download the CUHK-PEDES dataset from [here](https://github.com/ShuangLI59/Person-Search-with-Natural-Language-Description) , the pa100k dataset from [here](https://github.com/xh-liu/HydraPlus-Net), the RSTPReid dataset from [here](https://github.com/NjtechCVLab/RSTPReid-Dataset), and ICFG-PEDES dataset from [here](https://github.com/zifyloo/SSAN).
 (swin_base_patch4_window7_224_22k.pth、g_c_g_a_0_attrs.json等的链接)
 Organize `data` folder as follows:
 
