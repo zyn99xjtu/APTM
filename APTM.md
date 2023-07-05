@@ -7,7 +7,7 @@
 We also present a large Multi-Attribute and Language Search dataset for text-based person retrieval, called **MALS**, and explore the feasibility of performing pre-training on both attribute recognition and image-text matching tasks in one stone. In particular, MALS contains 1, 510, 330 image-text pairs, which is about 37.5× larger than prevailing CUHK-PEDES, and all images are annotated with 27 attributes. 
 
 Extensive experiments validate the effectiveness of the pre-training on MALS, achieving the state-of-the-art retrieval performance via APTM on three challenging real-world benchmarks. In particular, APTM achieves a consistent improvement of +6.60%, +7.39%, and +15.90% Recall@1 accuracy on CUHK-PEDES, ICFG-PEDES, and RSTPReid datasets by a clear margin, respectively. More details can be found at our paper: [Towards Unified Text-based Person Retrieval: A Large-scale Multi-Attribute and Language Search Benchmark](https://arxiv.org/abs/2306.02898)
-<div align="center"><img src="Images/framework.jpg" width="600"></div>
+<div align="center"><img src="assets/framework.jpg" width="600"></div>
 ## News
 * The **APTM** is released. Welcome to communicate！
 
@@ -17,9 +17,9 @@ MALS leverages generative models to generate a large-scale dataset including 1.5
 **Note that MALS can only be used for research, any commercial usage is forbidden.**
 
 This is the comparison between MALS and other text based person retrieval datasets. 
-<div align="center"><img src="Images/chart1.jpg" width="900"></div>
+<div align="center"><img src="assets/chart1.jpg" width="900"></div>
 These are examples of our MALS dataset and CUHK-PEDES.
-<div align="center"><img src="Images/examples.jpg" width="900"></div>
+<div align="center"><img src="assets/examples.jpg" width="900"></div>
 Annotation format:
 ```
 这里是item例子
