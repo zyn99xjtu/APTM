@@ -8,6 +8,7 @@ We also present a large Multi-Attribute and Language Search dataset for text-bas
 
 Extensive experiments validate the effectiveness of the pre-training on MALS, achieving the state-of-the-art retrieval performance via APTM on three challenging real-world benchmarks. In particular, APTM achieves a consistent improvement of +6.60%, +7.39%, and +15.90% Recall@1 accuracy on CUHK-PEDES, ICFG-PEDES, and RSTPReid datasets by a clear margin, respectively. More details can be found at our paper: [Towards Unified Text-based Person Retrieval: A Large-scale Multi-Attribute and Language Search Benchmark](https://arxiv.org/abs/2306.02898)
 <div align="center"><img src="assets/framework.jpg" width="600"></div>
+
 ## News
 * The **APTM** is released. Welcome to communicate！
 
