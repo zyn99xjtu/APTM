@@ -22,28 +22,36 @@ This is the comparison between MALS and other text based person retrieval datase
 These are examples of our MALS dataset and CUHK-PEDES.
 <div align="center"><img src="assets/examples.jpg" width="900"></div>
 Annotation format:
+
 ```
 这里是item例子
 ```
+
 ## Models
+
 The checkpoints have been released at [Baidu Yun](link1) and [Google Drive](link2)
 (model结构介绍和实验结果,不需要就不加了)
 
 ## Usage
+
 ### Install Requirements
+
 we use 4 RTX3090 24G GPU for training and evaluation.
 
 Create conda environment.
+
 ```
 conda create --name APTM --file requirements.txt
 conda activate APTM
 ```
 
 ### Datasets Prepare
+
 Download the CUHK-PEDES dataset from [here](https://github.com/ShuangLI59/Person-Search-with-Natural-Language-Description) , the pa100k dataset from [here](), the RSTPReid dataset from [here](), and ICFG-PEDES dataset from [here](https://github.com/zifyloo/SSAN).
 (还有pa100k 和 RSTPReid链接)
 (swin_base_patch4_window7_224_22k.pth、g_c_g_a_0_attrs.json等的链接)
 Organize `data` folder as follows:
+
 ```
 |-- data/
 |		|-- bert-base-uncased
@@ -56,7 +64,9 @@ Organize `data` folder as follows:
 |            |-- g_c_g_a_7_attrs.json
 |		|-- swin_base_patch4_window7_224_22k.pth
 ```
+
 And organize those datasets in `images` folder as follows:
+
 ```
 |-- images/
 |   |-- <CUHK-PEDES>/
@@ -85,15 +95,19 @@ And organize those datasets in `images` folder as follows:
 |       |-- 没写
 |       |-- 没写
 ```
+
 ### Pretraining  Inference
 We pretrain our APTM using MALS as follows：
+
 ```
 python run.py 
 CUDA_VISIBLE_DEVICES=0,1,2,3 
 没写
 ```
+
 ### Fine-tuning Inference
 We fine-tune our APTM using existing person-reid datasets. Performance can be improved through replacing the backbone with our pre-trained model. Taking CUHK-PEDES as example:
+
 ```
 python run.py 
 CUDA_VISIBLE_DEVICES=0,1,2,3 
@@ -102,6 +116,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3
 
 ## Reference
 If you use APTM in your research, please cite it by the following BibTeX entry:
+
 ```
 @article{yang2023towards,
   title={Towards Unified Text-based Person Retrieval: A Large-scale Multi-Attribute and Language Search Benchmark},
