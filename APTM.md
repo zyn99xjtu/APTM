@@ -27,16 +27,16 @@ Annotation format:
 这里是item例子
 ```
 
-## Models
+## Models and Weights
 
 The checkpoints have been released at [Baidu Yun](link1) and [Google Drive](link2)
-(model结构介绍和实验结果,不需要就不加了)
+(model结构介绍和实验结果,不需要就不加了,需要我去加)
 
 ## Usage
 
 ### Install Requirements
 
-we use 4 RTX3090 24G GPU for training and evaluation.
+we use 4 RTX3090 24G GPU for training and evaluation.（要改）
 
 Create conda environment.
 
