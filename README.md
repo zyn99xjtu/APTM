@@ -68,9 +68,9 @@ Organize `data` folder as follows:
 
 ```
 |-- data/
-|    |-- bert-base-uncased
-|    |-- finetune
-|        |-- gene_attrs
+|    |-- bert-base-uncased/
+|    |-- finetune/
+|        |-- gene_attrs/
 |            |-- g_4x_attrs.json
 |            |-- g_c_g_a_0_attrs.json
 |            |-- ...
@@ -90,35 +90,35 @@ And organize those datasets in `images` folder as follows:
 ```
 |-- images/
 |    |-- <CUHK-PEDES>/
-|        |-- imgs
-|            |-- cam_a
-|            |-- cam_b
+|        |-- imgs/
+|            |-- cam_a/
+|            |-- cam_b/
 |            |-- ...
-|            |-- train_query
-|            |-- gene_crop
-|                |-- 4x
-|                |-- c_g_a
+|            |-- train_query/
+|            |-- gene_crop/
+|                |-- 4x/
+|                |-- c_g_a/
 |                |-- ...
-|                |-- i_g_a_43
+|                |-- i_g_a_43/
 |
 |    |-- <ICFG-PEDES>/
-|        |-- test
-|        |-- train 
+|        |-- test/
+|        |-- train/
 |
 |    |-- <pa100k>/
-|        |-- release_data
+|        |-- release_data/
 |
 |    |-- <RSTPReid>/
 ```
 
-### Pretraining  Inference
+### Pretraining
 We pretrain our APTM using MALS as follows：
 
 ```
 python3 run.py --task "itr_gene" --dist "f4" --output_dir "output/pretrain"
 ```
 
-### Fine-tuning Inference
+### Fine-tuning
 We fine-tune our APTM using existing text-based Person Reid datasets. Performance can be improved by replacing the backbone with our pre-trained model. Taking CUHK-PEDES as example:
 
 ```
