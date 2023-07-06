@@ -23,13 +23,15 @@ These are examples of our MALS dataset and CUHK-PEDES.
 Annotation format:
 
 ```
-[{
-"image": "gene_crop/c_g_a_0/0.jpg",
+[{"image": "gene_crop/c_g_a_0/0.jpg",
 "caption": "a young boy wearing a black hoodie leaning against a wall with his hands on his hips and his hands on his hips wearing jeans and a baseball cap",
- "image_id": "c_g_a_0_0"},
+"image_id": "c_g_a_0_0",
+"label": [1, 0, ..., 1, 1]},
 ...
 {"image": "gene_crop/c_g_a_0/20217.jpg",
-"caption": "a woman in a white top and black pants posing for a picture in front of a brick wall with a pink carpet in front of her", "image_id": "c_g_a_0_20217"}
+"caption": "a woman in a white top and black pants posing for a picture in front of a brick wall with a pink carpet in front of her",
+"image_id": "c_g_a_0_20217",
+"label": [0, 1, ..., -1, -1]}
 ]
 ```
 
