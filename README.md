@@ -31,8 +31,7 @@ Annotation format:
 {"image": "gene_crop/c_g_a_0/20217.jpg",
 "caption": "a woman in a white top and black pants posing for a picture in front of a brick wall with a pink carpet in front of her",
 "image_id": "c_g_a_0_20217",
-"label": [0, 1, ..., -1, -1]}
-]
+"label": [0, 1, ..., -1, -1]}]
 ```
 
 ## Models and Weights
