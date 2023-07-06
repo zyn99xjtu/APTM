@@ -23,19 +23,26 @@ These are examples of our MALS dataset and CUHK-PEDES.
 Annotation format:
 
 ```
-这里是item例子
+[{
+"image": "gene_crop/c_g_a_0/0.jpg",
+"caption": "a young boy wearing a black hoodie leaning against a wall with his hands on his hips and his hands on his hips wearing jeans and a baseball cap",
+ "image_id": "c_g_a_0_0"},
+...
+{"image": "gene_crop/c_g_a_0/20217.jpg",
+"caption": "a woman in a white top and black pants posing for a picture in front of a brick wall with a pink carpet in front of her", "image_id": "c_g_a_0_20217"}
+]
 ```
 
 ## Models and Weights
 
 The checkpoints have been released at [Baidu Yun](link1) and [Google Drive](link2)
-(model结构介绍和实验结果,不需要就不加了,需要我去加)
+
 
 ## Usage
 
 ### Install Requirements
 
-we use 4 RTX3090 24G GPU for training and evaluation.（要改）
+we use 4 A100 80G GPU for training and evaluation.
 
 Create conda environment.
 
@@ -47,13 +54,14 @@ conda activate APTM
 ### Datasets Prepare
 
 Download the CUHK-PEDES dataset from [here](https://github.com/ShuangLI59/Person-Search-with-Natural-Language-Description) , the pa100k dataset from [here](https://github.com/xh-liu/HydraPlus-Net), the RSTPReid dataset from [here](https://github.com/NjtechCVLab/RSTPReid-Dataset), and ICFG-PEDES dataset from [here](https://github.com/zifyloo/SSAN).
-(swin_base_patch4_window7_224_22k.pth、g_c_g_a_0_attrs.json等的链接)
+[swin_base_patch4_window7_224_22k.pth](link) 
+[gene_attrs](link)
+
 Organize `data` folder as follows:
 
 ```
 |-- data/
 |		|-- bert-base-uncased
-|       |-- 没写
 |		|-- finetune
 |       |-- gene_attrs
 |            |-- g_4x_attrs.json
@@ -77,39 +85,33 @@ And organize those datasets in `images` folder as follows:
 |   |-- <ICFG-PEDES>/
 |       |-- imgs
 |            |-- test
-|       				|-- 没写
 |            |-- train 
-|       				|-- 没写
 |
 |   |-- <pa100k>/
 |       |-- release_data
-|            |-- 没写
 |       |-- ...
-|       |-- 没写
-|       |-- 没写
 |   |-- <RSTPReid>/
-|       |-- 没写
 |       |-- ...
-|       |-- 没写
-|       |-- 没写
 ```
 
 ### Pretraining  Inference
 We pretrain our APTM using MALS as follows：
 
 ```
-python run.py 
-CUDA_VISIBLE_DEVICES=0,1,2,3 
-没写
+python3 run.py --task "itr_gene" --dist "f4" --output_dir "/home/x_out/3w_attr_lb0.4_0.8" --checkpoint "16m_base_model_state_step_199999.th"
 ```
 
 ### Fine-tuning Inference
 We fine-tune our APTM using existing person-reid datasets. Performance can be improved through replacing the backbone with our pre-trained model. Taking CUHK-PEDES as example:
 
 ```
-python run.py 
-CUDA_VISIBLE_DEVICES=0,1,2,3 
-没写
+python3 run.py --task "itr_cuhk" --dist "f4" --output_dir "/home/x_out/151w_attr_lb0.4_0.8/cuhk_eda_b120" --checkpoint "/home/x_out/151w_attr_lb0.4_0.8/checkpoint_31.pth"
+```
+
+### Evaluation
+
+```
+python3 run.py --task "itr_cuhk" --evaluate --dist "f4" --output_dir "output/baseline/itc_itm_mlm/150w/t2i" --checkpoint "output/baseline/itc_itm_mlm/150w/checkpoint_best.pth"
 ```
 
 ## Reference
