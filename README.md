@@ -48,8 +48,10 @@ we use 4 A100 80G GPU for training and evaluation.
 Create conda environment.
 
 ```
-conda create --name APTM --file requirements.txt
-conda activate APTM
+conda create -n aptm python=3.8
+conda activate aptm
+pip install torch==1.9.1+cu111 torchvision==0.10.1+cu111 torchaudio==0.9.1 -f https://download.pytorch.org/whl/torch_stable.html
+pip3 install -r requirements.txt
 ```
 
 ### Datasets Prepare
