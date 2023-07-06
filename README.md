@@ -57,7 +57,7 @@ pip3 install -r requirements.txt
 ### Datasets Prepare
 
 Download the CUHK-PEDES dataset from [here](https://github.com/ShuangLI59/Person-Search-with-Natural-Language-Description) , the pa100k dataset from [here](https://github.com/xh-liu/HydraPlus-Net), the RSTPReid dataset from [here](https://github.com/NjtechCVLab/RSTPReid-Dataset), and ICFG-PEDES dataset from [here](https://github.com/zifyloo/SSAN).
-[swin_base_patch4_window7_224_22k.pth](link) 
+[swin_base_patch4_window7_224_22k.pth](https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_base_patch4_window7_224_22k.pth) 
 [gene_attrs](link)
 
 Organize `data` folder as follows:
