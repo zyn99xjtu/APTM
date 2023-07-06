@@ -56,7 +56,8 @@ pip3 install -r requirements.txt
 
 ### Datasets Prepare
 
-Download the CUHK-PEDES dataset from [here](https://github.com/ShuangLI59/Person-Search-with-Natural-Language-Description) , the PA-100K dataset from [here](https://github.com/xh-liu/HydraPlus-Net), the RSTPReid dataset from [here](https://github.com/NjtechCVLab/RSTPReid-Dataset), and ICFG-PEDES dataset from [here](https://github.com/zifyloo/SSAN).
+Download the CUHK-PEDES dataset from [here](https://github.com/ShuangLI59/Person-Search-with-Natural-Language-Description) , the PA-100K dataset from [here](https://github.com/xh-liu/HydraPlus-Net), the RSTPReid dataset from [here](https://github.com/NjtechCVLab/RSTPReid-Dataset), and ICFG-PEDES dataset from [here](https://github.com/zifyloo/SSAN). Download the processed json files of the aboves four datasets from [here]()
+
 Download pre-trained models for parameter initialization:
     image encoder: [swin-transformer-base](https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_base_patch4_window7_224_22k.pth)
     text encoder: [bert-base](https://huggingface.co/bert-base-uncased/tree/main)
@@ -65,9 +66,9 @@ Organize `data` folder as follows:
 
 ```
 |-- data/
-|		|-- bert-base-uncased
-|		|-- finetune
-|       |-- gene_attrs
+|    |-- bert-base-uncased
+|    |-- finetune
+|        |-- gene_attrs
 |            |-- g_4x_attrs.json
 |            |-- g_c_g_a_0_attrs.json
 |            |-- ...
@@ -79,15 +80,15 @@ Organize `data` folder as follows:
 |        |-- ...
 |        |-- PA100K_train.json
 |        |-- ...
-|		|-- swin_base_patch4_window7_224_22k.pth
+|    |-- swin_base_patch4_window7_224_22k.pth
 ```
 
 And organize those datasets in `images` folder as follows:
 
 ```
 |-- images/
-|   |-- <CUHK-PEDES>/
-|       |-- imgs
+|    |-- <CUHK-PEDES>/
+|        |-- imgs
 |            |-- cam_a
 |            |-- cam_b
 |            |-- ...
@@ -98,14 +99,14 @@ And organize those datasets in `images` folder as follows:
 |                |-- ...
 |                |-- i_g_a_43
 |
-|   |-- <ICFG-PEDES>/
-|       |-- test
-|       |-- train 
+|    |-- <ICFG-PEDES>/
+|        |-- test
+|        |-- train 
 |
-|   |-- <pa100k>/
-|       |-- release_data
+|    |-- <pa100k>/
+|        |-- release_data
 |
-|   |-- <RSTPReid>/
+|    |-- <RSTPReid>/
 ```
 
 ### Pretraining  Inference
