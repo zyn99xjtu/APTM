@@ -59,8 +59,10 @@ pip3 install -r requirements.txt
 Download the CUHK-PEDES dataset from [here](https://github.com/ShuangLI59/Person-Search-with-Natural-Language-Description) , the PA-100K dataset from [here](https://github.com/xh-liu/HydraPlus-Net), the RSTPReid dataset from [here](https://github.com/NjtechCVLab/RSTPReid-Dataset), and ICFG-PEDES dataset from [here](https://github.com/zifyloo/SSAN). Download the processed json files of the aboves four datasets from [here]()
 
 Download pre-trained models for parameter initialization:
-    image encoder: [swin-transformer-base](https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_base_patch4_window7_224_22k.pth)
-    text encoder: [bert-base](https://huggingface.co/bert-base-uncased/tree/main)
+
+image encoder: [swin-transformer-base](https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_base_patch4_window7_224_22k.pth)
+
+text encoder: [bert-base](https://huggingface.co/bert-base-uncased/tree/main)
 
 Organize `data` folder as follows:
 
