@@ -113,20 +113,20 @@ And organize those datasets in `images` folder as follows:
 We pretrain our APTM using MALS as follows：
 
 ```
-python3 run.py --task "itr_gene" --dist "f4" --output_dir "/home/x_out/3w_attr_lb0.4_0.8" --checkpoint "16m_base_model_state_step_199999.th"
+python3 run.py --task "itr_gene" --dist "f4" --output_dir "output/pretrain"
 ```
 
 ### Fine-tuning Inference
-We fine-tune our APTM using existing person-reid datasets. Performance can be improved through replacing the backbone with our pre-trained model. Taking CUHK-PEDES as example:
+We fine-tune our APTM using existing text-based Person Reid datasets. Performance can be improved by replacing the backbone with our pre-trained model. Taking CUHK-PEDES as example:
 
 ```
-python3 run.py --task "itr_cuhk" --dist "f4" --output_dir "/home/x_out/151w_attr_lb0.4_0.8/cuhk_eda_b120" --checkpoint "/home/x_out/151w_attr_lb0.4_0.8/checkpoint_31.pth"
+python3 run.py --task "itr_cuhk" --dist "f4" --output_dir "output/ft_cuhk" --checkpoint "output/pretrain/checkpoint_31.pth"
 ```
 
 ### Evaluation
 
 ```
-python3 run.py --task "itr_cuhk" --evaluate --dist "f4" --output_dir "output/baseline/itc_itm_mlm/150w/t2i" --checkpoint "output/baseline/itc_itm_mlm/150w/checkpoint_best.pth"
+python3 run.py --task "itr_cuhk" --evaluate --dist "f4" --output_dir "output/ft_cuhk/test" --checkpoint "output/ft_cuhk/checkpoint_best.pth"
 ```
 
 ## Reference
